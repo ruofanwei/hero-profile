@@ -82,7 +82,7 @@ const HeroList = () => {
           display: flex;
           flex-wrap: wrap;
           gap: 16px;
-          justify-content: flex-start;
+          justify-content: space-between;
           @media (max-width: 768px) {
             justify-content: center;
           }
