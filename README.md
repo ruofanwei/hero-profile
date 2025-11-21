@@ -4,14 +4,14 @@
 
 ### Installation & Running
 
-Clone the repository
-Install packages:
+1. Clone the repository
+2. Install packages:
 
 ```
 pnpm install
 ```
 
-Run the development server:
+3. Run the development server:
 
 ```
 pnpm dev
@@ -41,11 +41,11 @@ src/
 ```
 
 - 資料來源 HeroDataProvider
-  進入應用時呼叫一次 /heroes 並存進 Context，所有需要列表資料的元件都從這裡讀，只有儲存成功才 refetch。
-  因此路由切換時 Hero List 會保持在同一份資料上，也方便統一處理 loading/error。
+  - 進入應用時呼叫一次 /heroes 並存進 Context，所有需要列表資料的元件都從這裡讀，只有儲存成功才 refetch。
+    因此路由切換時 Hero List 會保持在同一份資料上，也方便統一處理 loading/error。
 - HeroProfilePanel 的 state - API 讀取與使用者編輯分開管理，讓規則容易維護
-  useHeroProfile 只負責 API 讀取與錯誤處理，元件內另有 draft 來暫存使用者輸入，baseTotal 則記錄原始總點數，把兩者相減即可得剩餘點數。
-  這樣就能清楚區分 API 原始值 vs. 正在編輯的值，驗證規則（剩餘點數=0才能儲存）也好實作，需要時還可以把 draft 重置回最新 API 結果。
+  - useHeroProfile 只負責 API 讀取與錯誤處理，元件內另有 draft 來暫存使用者輸入，baseTotal 則記錄原始總點數，把兩者相減即可得剩餘點數。
+    這樣就能清楚區分 API 原始值 vs. 正在編輯的值，驗證規則（剩餘點數=0才能儲存）也好實作，需要時還可以把 draft 重置回最新 API 結果。
 
 ## 第三方 Library 與選用原因
 
