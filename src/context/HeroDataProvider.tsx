@@ -3,10 +3,7 @@ import type { PropsWithChildren } from 'react';
 import { fetchHeroes } from '../api/heroes';
 import type { Hero } from '../api/heroes';
 import { toApiError } from '../api/client';
-import {
-  HeroDataContext,
-  type HeroDataContextValue,
-} from './HeroDataContext';
+import { HeroDataContext, type HeroDataContextValue } from './HeroDataContext';
 
 export const HeroDataProvider = ({ children }: PropsWithChildren) => {
   const [heroes, setHeroes] = useState<Hero[]>([]);

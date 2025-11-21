@@ -235,7 +235,9 @@ const HeroProfilePanel = () => {
               margin-left: auto;
             `}
           >
-            <Typography.Text strong>剩餘點數：{remainingPoints}</Typography.Text>
+            <Typography.Text strong>
+              剩餘點數：{remainingPoints}
+            </Typography.Text>
             <Tooltip
               title={remainingPoints !== 0 ? '剩餘點數需為 0 才能儲存' : ''}
               placement="topRight"
