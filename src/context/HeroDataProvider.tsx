@@ -1,27 +1,11 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useMemo,
-  useState,
-  useEffect,
-} from 'react';
+import { useCallback, useMemo, useState, useEffect } from 'react';
 import type { PropsWithChildren } from 'react';
 import { fetchHeroes } from '../api/heroes';
-import type { Hero } from '../api/heroes';
 import { toApiError } from '../api/client';
-
-type HeroDataContextValue = {
-  heroes: Hero[];
-  isLoading: boolean;
-  isFetching: boolean;
-  error: string | null;
-  refetch: () => Promise<void>;
-};
-
-const HeroDataContext = createContext<HeroDataContextValue | undefined>(
-  undefined,
-);
+import {
+  HeroDataContext,
+  type HeroDataContextValue,
+} from './HeroDataContext';
 
 export const HeroDataProvider = ({ children }: PropsWithChildren) => {
   const [heroes, setHeroes] = useState<Hero[]>([]);
@@ -63,12 +47,4 @@ export const HeroDataProvider = ({ children }: PropsWithChildren) => {
       {children}
     </HeroDataContext.Provider>
   );
-};
-
-export const useHeroData = () => {
-  const context = useContext(HeroDataContext);
-  if (context === undefined) {
-    throw new Error('useHeroData must be used within HeroDataProvider');
-  }
-  return context;
 };

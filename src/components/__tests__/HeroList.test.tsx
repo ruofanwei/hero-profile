@@ -3,7 +3,7 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import HeroList from '../HeroList';
 
-vi.mock('../../context/HeroDataContext', () => ({
+vi.mock('../../hooks/useHeroData', () => ({
   useHeroData: () => ({
     heroes: [
       { id: '1', name: 'Daredevil', image: 'image-1' },

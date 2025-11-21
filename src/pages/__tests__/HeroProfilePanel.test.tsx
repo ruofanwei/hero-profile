@@ -8,7 +8,7 @@ const mockRefetchHeroes = vi.fn();
 const mockPatchHeroProfile = vi.fn();
 const mockSetProfile = vi.fn();
 
-vi.mock('../../context/HeroDataContext', () => ({
+vi.mock('../../hooks/useHeroData', () => ({
   useHeroData: () => ({
     heroes: [{ id: '1', name: 'Daredevil', image: 'image-1' }],
     refetch: mockRefetchHeroes,

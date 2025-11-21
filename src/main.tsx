@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { App as AntdApp, ConfigProvider } from 'antd';
 import App from './App.tsx';
-import { HeroDataProvider } from './context/HeroDataContext.tsx';
+import { HeroDataProvider } from './context/HeroDataProvider.tsx';
 import { GlobalStyles } from './styles/global.ts';
 import 'antd/dist/reset.css';
 

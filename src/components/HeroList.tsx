@@ -2,7 +2,7 @@ import { Alert, Button, Spin } from 'antd';
 import { useParams } from 'react-router-dom';
 import { css } from 'styled-components';
 import HeroCard from './HeroCard';
-import { useHeroData } from '../context/HeroDataContext';
+import { useHeroData } from '../hooks/useHeroData';
 
 const wrapperStyles = css`
   background: #fff;
