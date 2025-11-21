@@ -29,6 +29,8 @@ const cardBaseStyles = css`
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08);
+  width: min(100%, 760px);
+  margin: 0 auto;
 `;
 
 type GuardParams = {

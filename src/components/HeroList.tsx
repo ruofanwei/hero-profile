@@ -7,8 +7,10 @@ import { useHeroData } from '../hooks/useHeroData';
 const wrapperStyles = css`
   background: #fff;
   border-radius: 16px;
-  padding: 32px 24px 28px;
+  padding: 12px 16px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  width: min(100%, 760px);
+  margin: 0 auto;
 `;
 
 const stateStyles = css`
@@ -80,7 +82,10 @@ const HeroList = () => {
           display: flex;
           flex-wrap: wrap;
           gap: 16px;
-          justify-content: center;
+          justify-content: flex-start;
+          @media (max-width: 768px) {
+            justify-content: center;
+          }
         `}
       >
         {heroes.map((hero) => (
