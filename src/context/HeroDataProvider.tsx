@@ -1,6 +1,7 @@
 import { useCallback, useMemo, useState, useEffect } from 'react';
 import type { PropsWithChildren } from 'react';
 import { fetchHeroes } from '../api/heroes';
+import type { Hero } from '../api/heroes';
 import { toApiError } from '../api/client';
 import {
   HeroDataContext,
